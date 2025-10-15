@@ -12,7 +12,7 @@
     <h1>Laboration L7c - Formulär</h1>
     <h2>Pensionat Sjöstugan</h2>
     <h3>Förfrågan om rumsbokning</h3>
-    <form id="booking">
+    <form id="booking" method="post" data-netlify="true">
     <fieldset id="room">
         <legend>Val av rum</legend>
         <label>
@@ -28,9 +28,9 @@
     </fieldset>
     <fieldset id="date">
         <legend>Datum och antal nätter</legend>
-        <label>Ankomstdag<input type="date" name="arrival">
+        <label>*Ankomstdag<input type="date" name="arrival" required>
         </label>
-        <label>Antal nätter
+        <label>*Antal nätter
             <select name="nrOfNights">
                 <option value="1" selected>1</option>
                 <option value="2">2</option>
@@ -59,16 +59,16 @@
     </fieldset>
     <fieldset id="customer">
         <legend>Kund</legend>
-        <label for="name">Namn</label>
-        <input type="text" name="name" id="name">
+        <label for="name">*Namn</label>
+        <input type="text" name="name" id="name" required>
         <label for="street">Gatuadress</label>
         <input type="text" name="street" id="street">
         <label for="zipcode">Postnummer</label>
         <input type="text" name="zipcode" id="zipcode">
         <label for="city">Ort</label>
         <input type="text" name="city" id="city">
-        <label for="email">E-post</label>
-        <input type="text" name="email" id="email">
+        <label for="email">*E-post</label>
+        <input type="email" name="email" id="email" required>
     </fieldset>
     <input type="submit" value="Skicka förfrågan" id="send">
     </form>
